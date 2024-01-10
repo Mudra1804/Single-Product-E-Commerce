@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>DazzleDash</title>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">DazzleDash</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Single Product Container -->
+  <div class="container product-container">
+    
+
+    <!-- Product Image with Color Change Option -->
+    <div class="row">
+      <div class="col-md-4">
+        <img id="productImage" class="product-image" src="img/r4.jpg" alt="Product Image" style="height: 400px; width: 100%;">
+        
+      </div>
+      
+      <div class="col-md-8">
+        <h4 class="text-left">SHEIN Women Crop T-Shirt Olive Green</h4><br>
+        <del>₹350.00</del>
+        <h4>₹300.00</h4><br><br>
+        <button>XS</button>
+        <button>S</button>
+        <button>M</button>
+        <button>L</button>
+        <button>XL</button><br><br>
+        <br><br><button class="add-to-cart">Add to Cart</button>
+        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <span class="color-option" style="background-color: #3498db;" onclick="changeColor('#3498db')"></span>
+          <span class="color-option" style="background-color: #e74c3c;" onclick="changeColor('#e74c3c')"></span>
+          <!-- Add more color options as needed -->
+        </div>
+      </div>
+    </div>
+
+    <div>
+        <center><h4>Recommended For You</h4></center>
+    </div>
+    <!-- Recommended Images -->
+    <div class="row recommended-images">
+      <div class="col-md-4">
+        <img class="product-image" src="img/r1.jpg" alt="Recommended Image 1" style="height: 300px; width: 100%;">
+        <center><h5>SHEIN Crop T-shirt White</h5></center>
+        <center><h5>₹300.00</h5></center>
+      </div>
+      <div class="col-md-4">
+        <img class="product-image" src="img/r2.jpg" alt="Recommended Image 2" style="height: 300px; width: 100%;">
+        <center><h5>SHEIN Knor Crop T-shirt White</h5></center>
+        <center><h5>₹280.00</h5></center>
+      </div>
+      <div class="col-md-4">
+        <img class="product-image" src="img/r3.jpg" alt="Recommended Image 3" style="height: 300px; width: 100%;">
+        <center><h5>SHEIN Knot T-shirt White</h5></center>
+        <center><h5>₹250.00</h5></center>
+      </div>
+      <!-- Add more recommended images as needed -->
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+    function changeColor(color) {
+      document.getElementById('productImage').style.filter = `hue-rotate(${color === '#3498db' ? '0deg' : '20deg'})`;
+    }
+
+    function toggleLike() {
+      const likeIcon = document.querySelector('.like-icon');
+      likeIcon.style.color = likeIcon.style.color === 'red' ? '' : 'red';
+    }
+  </script>
+
+</body>
+</html>
